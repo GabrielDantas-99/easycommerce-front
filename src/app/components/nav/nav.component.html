@@ -4,7 +4,7 @@
     [routerLink]="link.route" 
     *ngFor="let link of navLinks" 
     class="navLink"
-    [ngClass]="{'activeLink': isLinkActive(link.route)}"
+    [ngClass]="isLinkActive(link.route) ? 'activeLink' : 'inactiveLink'"
   >
     <span class="material-symbols-outlined text-3xl">
       {{ link.icon }}
