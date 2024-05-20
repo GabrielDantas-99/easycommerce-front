@@ -1,0 +1,13 @@
+.navLink {
+  @apply
+  flex
+  items-center
+  p-4
+  text-xl
+  gap-4
+  rounded-lg
+  transition
+  hover:bg-black
+  hover:bg-opacity-10 
+  cursor-pointer
+}
