@@ -1,8 +1,10 @@
 <ul>
-  <a routerLinkActive="active"
+  <a 
+    routerLinkActive="active"
     [routerLink]="link.route" 
     *ngFor="let link of navLinks" 
     class="navLink"
+    [ngClass]="{'activeLink': isLinkActive(link.route)}"
   >
     <span class="material-symbols-outlined text-3xl">
       {{ link.icon }}

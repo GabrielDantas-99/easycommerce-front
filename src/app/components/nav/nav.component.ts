@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NavLink } from 'src/app/interfaces/navlink.interface';
 
 @Component({
@@ -15,6 +16,14 @@ export class NavComponent {
     { title: 'Categorias', icon: 'sell', route: 'categorias' },
     { title: 'Clientes', icon: 'group', route: 'clientes' },
     { title: 'Configurações', icon: 'tune', route: 'configuracoes' },
-  ]
+  ];
+
+  constructor(
+    private router: Router
+  ) {}
+
+  isLinkActive(route: string): boolean {
+    return this.router.url.includes(route);
+  }
 
 }

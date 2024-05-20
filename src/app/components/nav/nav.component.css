@@ -7,7 +7,18 @@
   gap-4
   rounded-lg
   transition
+
+  cursor-pointer
+}
+
+.activeLink {
+  @apply
+  text-white
+  bg-red-500
+}
+
+.inactiveLink {
+  @apply
   hover:bg-black
   hover:bg-opacity-10 
-  cursor-pointer
 }
