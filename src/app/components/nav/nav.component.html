@@ -1,0 +1,22 @@
+<ul>
+  <a routerLinkActive="active"
+    [routerLink]="link.route" 
+    *ngFor="let link of navLinks" 
+    class="
+      flex
+      items-center
+      p-4
+      text-xl
+      gap-4
+      rounded-lg
+      transition
+      hover:bg-black
+      hover:bg-opacity-10 
+      cursor-pointer
+  ">
+    <span class="material-symbols-outlined text-3xl">
+      {{ link.icon }}
+    </span>
+    {{ link.title }}
+  </a>
+</ul>
