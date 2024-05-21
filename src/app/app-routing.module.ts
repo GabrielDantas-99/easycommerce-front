@@ -9,8 +9,9 @@ import { VendasComponent } from './pages/vendas/vendas.component';
 import { VisaoGeralComponent } from './pages/visao-geral/visao-geral.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'visao-geral' },
   {
-    path: '', component: SidebarComponent, children: [
+    path: '',   component: SidebarComponent, children: [
       { path: 'visao-geral', component: VisaoGeralComponent },
       { path: 'vendas', component: VendasComponent },
       { path: 'produtos', component: ProdutosComponent },

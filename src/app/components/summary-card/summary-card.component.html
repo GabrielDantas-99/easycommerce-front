@@ -1,0 +1,25 @@
+<div class="grid place-items-center p-6 rounded-3xl" [ngClass]="getBgColor(atributo)">
+  <span class="material-symbols-outlined sharp text-3xl" [ngClass]="getTextColor(atributo)">
+    {{ icone }}
+  </span>
+</div>
+<div class="flex flex-col space-y-2">
+  <p class="text-slate-600 text-lg">{{ titulo }}</p>
+  <div class="flex items-center gap-6">
+    <p class="text-3xl font-bold" [ngClass]="getTextColor(atributo)">{{ valor }}</p>
+    <button class="
+        px-2 
+        py-1 
+        rounded 
+        w-fit
+        text-sm 
+        text-nowrap
+        font-medium" [ngClass]="porcentagem >= 0 ? 
+        'bg-[--green-light] text-[--green]' : 
+        'bg-[--red-light] text-[--red]'
+      " pTooltip="Porcentagem comparativa ao mês anterior." tooltipStyleClass="width: 700px"
+       tooltipPosition="right">
+      {{ porcentagem > 0 ? '+' : ''}}{{ porcentagem }}%
+  </button>
+  </div>
+</div>

@@ -7,14 +7,15 @@
   gap-4
   rounded-lg
   transition
-
   cursor-pointer
+  mb-1;
 }
 
 .activeLink {
   @apply
   text-white
   bg-red-500
+  font-semibold;
 }
 
 .inactiveLink {

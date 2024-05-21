@@ -1,0 +1,14 @@
+.container {
+  @apply
+  bg-[#f6f9fe] 
+  border-white 
+  border-2 
+  rounded-3xl 
+  w-full 
+  h-48 
+  flex 
+  items-center 
+  justify-around 
+  gap-4
+  px-8;
+}

@@ -1,20 +1,52 @@
-<div class="bg-yellow-200 w-full h-48 flex items-center justify-around gap-8 px-8">
-  <div class="bg-teal-200 w-1/4 rounded-lg h-36">
-    info 1
+<div class="container">
+  <app-summary-card
+    class="w-1/4 h-36 justify-center flex items-center gap-6"
+    titulo="Receita Total"
+    [valor]="resumo.receitaTotal.valor"
+    [porcentagem]="resumo.receitaTotal.porcentagem"
+    icone="attach_money"
+    atributo="receitaTotal"
+    ></app-summary-card>
+    <p-divider layout="vertical" class="bg-gray-200 bg-opacity-50 w-0.5 h-4/6"></p-divider>
+  <app-summary-card
+    class="w-1/4 h-36 justify-center flex items-center gap-6"
+    titulo="Gastos Totais"
+    [valor]="resumo.gastosTotais.valor"
+    [porcentagem]="resumo.gastosTotais.porcentagem"
+    icone="payments"
+    atributo="gastosTotais"
+  ></app-summary-card>
+  <p-divider layout="vertical" class="bg-gray-200 bg-opacity-50 w-0.5 h-4/6"></p-divider>
+  <app-summary-card
+    class="w-1/4 h-36 justify-center flex items-center gap-6"
+    titulo="Lucro Liquido"
+    [valor]="resumo.lucroLiquido.valor"
+    [porcentagem]="resumo.lucroLiquido.porcentagem"
+    icone="monitoring"
+    atributo="lucroLiquido"
+  ></app-summary-card>
+  <p-divider layout="vertical" class="bg-gray-200 bg-opacity-50 w-0.5 h-4/6"></p-divider>
+  <app-summary-card
+    class="w-1/4 h-36 justify-center flex items-center gap-6"
+    titulo="Pedidos Realizados"
+    [valor]="resumo.pedidosRealizados.valor"
+    [porcentagem]="resumo.pedidosRealizados.porcentagem"
+    icone="package_2"
+    atributo="pedidosRealizados"
+  ></app-summary-card>
+  <!-- <div class="bg-zinc-400 w-1/4 h-36">
+    Gastos Totais
   </div>
-  <div class="bg-teal-200 w-1/4 rounded-lg h-36">
-    info 2
+  <div class="bg-zinc-400 w-1/4 h-36">
+    Lucro Líquido
   </div>
-  <div class="bg-teal-200 w-1/4 rounded-lg h-36">
-    info 3
-  </div>
-  <div class="bg-teal-200 w-1/4 rounded-lg h-36">
-    info 4
-  </div>
+  <div class="bg-zinc-400 w-1/4 h-36">
+    Pedidos Realizados
+  </div> -->
 </div>
 <!-- MAIN CONTENT -->
-<div class="bg-zinc-400 p-8 h-full w-full">
-  <div class="h-full w-full bg-zinc-200">
+<div class="p-8 h-full w-full">
+  <div class="h-full w-full ">
     olá
   </div>
 </div>

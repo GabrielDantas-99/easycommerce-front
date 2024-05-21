@@ -6,6 +6,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ConfiguracoesComponent } from './configuracoes/configuracoes.component';
+import { PrimengModule } from '../shared/primeng/primeng.module';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -16,10 +18,12 @@ import { ConfiguracoesComponent } from './configuracoes/configuracoes.component'
     ProdutosComponent,
     CategoriasComponent,
     ClientesComponent,
-    ConfiguracoesComponent
+    ConfiguracoesComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimengModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }
