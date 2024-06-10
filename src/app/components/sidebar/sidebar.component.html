@@ -2,7 +2,7 @@
   <!-- SIDEBAR -->
   <div class="h-screen w-1/6">
     <!-- HEADER -->
-    <div class="flex justify-around h-20 py-4 w-full items-center px-4 border-b border-zinc-200">
+    <div class="flex justify-around h-32 py-4 w-full items-center px-4 border-b border-zinc-200">
       <img class="object-cover mx-auto" src="../../../assets/images/logo-linha-nobg.png" alt="foto-perfil" />
     </div>
     <!-- NAVMENU -->
@@ -13,23 +13,53 @@
   <!-- MAIN CONTENT -->
   <div class="flex-1">
     <!-- TOOLBAR -->
-    <div class="w-full h-20 0 bg-[--main-bg] flex justify-end px-8">
-      <div class="flex justify-around  h-20 py-4 items-center gap-4">
-        <img class="rounded-full w-14 h-14 object-cover mx-auto" src="../../../assets/images/foto-perfil.jpg"
-          alt="foto-perfil" />
-        <div class="w-44 mt-2 mx-auto text-center text-zinc-700 leading-3">
-          Bem-vindo(a) de volta,<br />
-          <strong class="text-xl pt-3">Eduardo Silva</strong>
+    <div class="w-full h-32 bg-[--main-bg] flex justify-between items-center px-8">
+      <!-- LEFT -->
+      <div
+        class="flex items-center px-2 gap-2 transition cursor-pointer rounded-xl hover:bg-slate-800 hover:bg-opacity-10">
+        <span class="material-symbols-outlined">
+          storefront
+        </span>
+        <span class="text-slate-800 font-semibold text-xl">Uni. Roberto Freite</span>
+        <button class="grid place-items-center -mr-2">
+          <span class="material-symbols-outlined text-4xl text-slate-600">
+            arrow_drop_down
+          </span>
+        </button>
+      </div>
+      <!-- MIDDLE -->
+      <div class="relative w-2/5">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+          <span class="material-symbols-outlined text-slate-300">
+            search
+          </span>
+        </span>
+        <input type="text"
+          class="w-full py-4 pl-10 pr-4 bg-[#f6f9fe] border-2 border-white rounded-full focus:outline-none focus:ring-4 focus:ring-red-600/20 "
+          placeholder="Pesquisar" />
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex items-center">
+        <div
+          class="flex justify-around h-fit px-3 py-2 items-center gap-4 transition cursor-pointer rounded-xl hover:bg-slate-800 hover:bg-opacity-10">
+          <img class="rounded-full w-14 h-14 object-cover mx-auto" src="../../../assets/images/foto-perfil.jpg"
+            alt="foto-perfil" />
+          <div class="w-fit mx-auto text-left text-slate-500 leading-3">
+            <strong class="text-xl pt-3 text-zinc-600">Eduardo Silva</strong>
+            <p class="text-sm">eduardo.paiva@gmail.com</p>
+          </div>
         </div>
-        <button>
-          <span class="material-symbols-outlined text-4xl">
-            logout
+        <button
+          class="grid place-items-center p-3 transition cursor-pointer rounded-xl hover:bg-slate-800 hover:bg-opacity-10">
+          <span class="material-symbols-outlined text-4xl text-slate-600">
+            arrow_drop_down
           </span>
         </button>
       </div>
     </div>
     <!-- SUMMARY OF INFORMATION -->
-    <div class="bg-[--main-bg] p-8">
+    <div class="bg-[--main-bg] h-screen p-8">
       <router-outlet></router-outlet>
     </div>
   </div>

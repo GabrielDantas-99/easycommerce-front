@@ -4,6 +4,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { FocusTrapModule } from 'primeng/focustrap';
 import { StyleClassModule } from 'primeng/styleclass';
 import { RippleModule } from 'primeng/ripple';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { RippleModule } from 'primeng/ripple';
     TooltipModule,
     FocusTrapModule,
     StyleClassModule,
-    RippleModule
+    RippleModule,
+    InputTextModule
   ]
 })
 export class PrimengModule { }

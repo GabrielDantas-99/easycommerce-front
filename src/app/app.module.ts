@@ -7,6 +7,7 @@ import { ComponentsModule } from './components/components.module';
 import { PrimengModule } from './shared/primeng/primeng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     ComponentsModule,
     PrimengModule,
-    PagesModule
+    PagesModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,7 +21,7 @@ export class VisaoGeralComponent {
 
   resumo: ItemCard = {
     receitaTotal: {
-      valor: 1274,
+      valor: 1274.13,
       porcentagem: 7.4
     },
     gastosTotais: {
@@ -33,7 +33,7 @@ export class VisaoGeralComponent {
       porcentagem: 12.1
     }, 
     pedidosRealizados: {
-      valor: 11,
+      valor: 9,
       porcentagem: -10
     }
   }
