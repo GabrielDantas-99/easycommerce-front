@@ -8,11 +8,12 @@ import { PrimengModule } from './shared/primeng/primeng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

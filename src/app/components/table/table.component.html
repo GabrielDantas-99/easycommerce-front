@@ -10,7 +10,7 @@
     <tbody>
       <tr *ngFor="let item of datasource">
         <td *ngFor="let atribute of atributes">
-          {{ item[atribute] }}
+          {{ atribute != 'date' ? item[atribute] : item[atribute] |  dateFormat}}
         </td>
       </tr>
     </tbody>

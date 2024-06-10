@@ -6,6 +6,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { SummaryCardComponent } from './summary-card/summary-card.component';
 import { PrimengModule } from '../shared/primeng/primeng.module';
 import { TableComponent } from './table/table.component';
+import { DateFormatPipe } from '../pipes/date-format.pipe';
 
 
 
@@ -14,12 +15,13 @@ import { TableComponent } from './table/table.component';
     SidebarComponent,
     NavComponent,
     SummaryCardComponent,
-    TableComponent
+    TableComponent,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
-    PrimengModule
+    PrimengModule,
   ],
   exports: [
     SummaryCardComponent,
