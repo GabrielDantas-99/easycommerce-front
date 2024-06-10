@@ -5,6 +5,7 @@ import { NavComponent } from './nav/nav.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SummaryCardComponent } from './summary-card/summary-card.component';
 import { PrimengModule } from '../shared/primeng/primeng.module';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -12,7 +13,8 @@ import { PrimengModule } from '../shared/primeng/primeng.module';
   declarations: [
     SidebarComponent,
     NavComponent,
-    SummaryCardComponent
+    SummaryCardComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { PrimengModule } from '../shared/primeng/primeng.module';
     PrimengModule
   ],
   exports: [
-    SummaryCardComponent
+    SummaryCardComponent,
+    TableComponent
   ]
 })
 export class ComponentsModule { }

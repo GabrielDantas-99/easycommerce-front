@@ -1,0 +1,18 @@
+<div class="bg-[#f6f9fe] border-white border-2 rounded-3xl p-6">
+  <table class="w-full">
+    <thead>
+      <tr>
+        <th class="text-slate-400" *ngFor="let c of columns">
+          {{ c }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datasource">
+        <td *ngFor="let atribute of atributes">
+          {{ item[atribute] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
