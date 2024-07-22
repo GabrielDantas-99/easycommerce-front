@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NavLink } from 'src/app/interfaces/navlink.interface';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavLinks } from 'src/app/models/navlinks.model';
 
 @Component({
   selector: 'app-nav',
@@ -9,14 +9,7 @@ import { NavLink } from 'src/app/interfaces/navlink.interface';
 })
 export class NavComponent {
 
-  navLinks: NavLink[] = [
-    { title: 'Visão Geral', icon: 'home', route: 'visao-geral' },
-    { title: 'Vendas', icon: 'inventory', route: 'vendas' },
-    { title: 'Produtos', icon: 'shopping_cart', route: 'produtos' },
-    { title: 'Categorias', icon: 'sell', route: 'categorias' },
-    { title: 'Clientes', icon: 'group', route: 'clientes' },
-    { title: 'Configurações', icon: 'tune', route: 'configuracoes' },
-  ];
+  navLinks = NavLinks;
 
   constructor(
     private router: Router

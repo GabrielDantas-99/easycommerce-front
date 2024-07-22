@@ -1,16 +1,42 @@
-<div class="bg-[#f6f9fe] border-white border-2 rounded-3xl p-6">
+<div class="bg-[#f6f9fe] border-white border-2 rounded-3xl px-6 pt-6">
+  <div class="flex items-center justify-between">
+    <h2 class="text-2xl text-zinc-600 font-medium">Pedidos Recentes</h2>
+    <button class="flex items-center text-zinc-600 font-normal hover:bg-blue-100 rounded-md transition p-2">
+      Ver Mais
+      <span class="material-symbols-outlined -mr-2">
+        arrow_right
+      </span>
+    </button>
+  </div>
   <table class="w-full">
     <thead>
       <tr>
-        <th class="text-slate-400" *ngFor="let c of columns">
+        <th class="text-slate-400 text-left text-lg py-6" *ngFor="let c of columns">
           {{ c }}
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of datasource">
-        <td *ngFor="let atribute of atributes">
-          {{ atribute != 'date' ? item[atribute] : item[atribute] |  dateFormat}}
+      <tr *ngFor="let item of datasource" class="border-t-2 border-slate-200">
+        <td *ngFor="let attribute of attributes" class="text-slate-500 font-medium text-lg py-6">
+          <div [ngSwitch]="attribute">
+            <span *ngSwitchCase="'date'">{{ item[attribute] | dateFormat }}</span>
+            <span class="px-3 py-2 rounded-md" *ngSwitchCase="'status'" [ngStyle]="{ 
+                'color': getStatus(item[attribute]).color, 
+                'background-color': getStatus(item[attribute]).background 
+              }">
+              {{ getStatus(item[attribute]).title }}
+            </span>
+            <span *ngSwitchDefault>{{ item[attribute] }}</span>
+          </div>
+        </td>
+        <td>
+          <button
+            class="text-slate-500 rounded-md grid place-items-center p-2 hover:bg-slate-800 hover:bg-opacity-10 transition">
+            <span class="material-symbols-outlined">
+              more_vert
+            </span>
+          </button>
         </td>
       </tr>
     </tbody>

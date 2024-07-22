@@ -42,17 +42,31 @@ export class VisaoGeralComponent {
   recentOrders: RecentOrders[] = [
     {
       id: 1,
-      orderNumber: '12B7889Y2',
+      orderNumber: '#12B7889Y2',
       client: 'Gabriel Dantas',
       date: new Date(2024, 5, 18, 14, 14, 56, 789).toISOString(),
       status: 'WAITING_PAYMENT',
     },
     {
       id: 2,
-      orderNumber: '12Z8723K3',
+      orderNumber: '#91Z8723K3',
       client: 'João Gomes',
-      date: new Date(2024, 5, 20, 12, 34, 56, 789).toISOString(),
+      date: new Date(2024, 5, 14, 12, 34, 56, 789).toISOString(),
       status: 'DELIVERED',
+    },
+    {
+      id: 3,
+      orderNumber: '#42B3723Y1',
+      client: 'Cynthia Luz',
+      date: new Date(2024, 5, 10, 2, 37, 56, 789).toISOString(),
+      status: 'PAID',
+    },
+    {
+      id: 4,
+      orderNumber: '#90O8723I2',
+      client: 'João Gomes',
+      date: new Date(2024, 4, 28, 18, 42, 56, 789).toISOString(),
+      status: 'CANCELED',
     }
   ];
 
